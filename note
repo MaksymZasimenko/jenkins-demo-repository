@@ -1,0 +1,25 @@
+
+search files =====> (java, feature, runner) double shift  (tap shift key twice)
+search word in file =====> (cmd+F or ctrl+F)
+search word globally =====> (cmd+shift+F or ctrl+shift+F)
+replace word in file =====> (cmd+R or ctrl+R)
+replace word globally =====> (cmd+shift+R or ctrl+shift+R)
+format code =====> (option+cmnd+L or Windows alt+ctrl+L)
+
+step back and fort ======> (option+cmnd+'-> || <-'   or alt+ctrl+'-> || <-' )
+
+Framework Flow: ======>   LoginRunner => login.feature => LoginSteps => LoginImpl (using webelement from LoginPage, using driver from WebdriverUtils)
+
+
+
+=========================RERUNNING FAILED SCENARIOS:
+1. tag the failed scenarios and run the tag
+2. get the Scenario line numbers and rerun by the lines
+3. Using Cucumber rerun plugin and generate txt file ("rerun:target/Rerun_Failed/ManageAccessRunner.txt")
+    And run using (features = "@target/Rerun_Failed/ManageAccessRunner.txt")
+
+
+=========================RUNNING IN PARALLEL
+1. launch all runners manually 1 after another
+2. Maven Surefire plugin
+3. "JVM parallel plugin" creates runners on the fly (is needed for the project which maintains only 1 runner)  https://github.com/temyers/cucumber-jvm-parallel-plugin
