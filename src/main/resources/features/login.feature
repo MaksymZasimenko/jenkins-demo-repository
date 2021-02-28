@@ -23,7 +23,7 @@ Feature: Login
 
     #Create Scenario Outline which checks if the test user and admin user can successfully login
 
-
+  @jenkinsDemo
   Scenario Outline: Verify <user> user can login to HomePage
     Given I navigate to Interview Prep
     Then I should see the "Login" page
